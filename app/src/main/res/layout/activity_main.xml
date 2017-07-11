@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="5"
+    tools:context="ph.com.jeffreyvcabrera.weatherinformation.activities.MainActivity">
+
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_weight="4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <fragment
+            android:id="@+id/fragmentTop"
+            android:name="ph.com.jeffreyvcabrera.weatherinformation.fragments.WeatherListFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_weather_list" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <fragment
+            android:id="@+id/fragmentBot"
+            android:name="ph.com.jeffreyvcabrera.weatherinformation.fragments.RefreshButtonFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/fragment_weather_list" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
